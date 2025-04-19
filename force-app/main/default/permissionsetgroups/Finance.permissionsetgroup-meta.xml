@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For approval by the finance</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Finance</label>
+    <permissionSets>Update_Estimated_revenue_date_in_Quote_Line_Item</permissionSets>
+    <permissionSets>Update_Opportunity</permissionSets>
+    <permissionSets>Update_Quote</permissionSets>
+    <permissionSets>Update_Sales_price</permissionSets>
+    <permissionSets>Update_Validated_price_in_Quote_Line_Item</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

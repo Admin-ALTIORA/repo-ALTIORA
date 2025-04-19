@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Hide_edit_button_account</name>
+    </customPermissions>
+    <description>Permission set to hide Edit button</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Hide edit button</label>
+    <license>Salesforce</license>
+</PermissionSet>

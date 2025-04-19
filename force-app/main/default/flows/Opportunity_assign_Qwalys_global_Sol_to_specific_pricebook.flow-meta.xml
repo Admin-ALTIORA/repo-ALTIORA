@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_CPR_price_Book_to_Opportunity</name>
+        <label>Assign CPR price Book to Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Pricebook2Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SOQL_CPR_Price_book_records.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Kit_Price_Book_to_Opportunity</name>
+        <label>Assign Kit Price Book to Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Pricebook2Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SOQL_KIT_Price_book_records.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Which_Invoice_Method_is_it</name>
+        <label>Which Invoice Method is it</label>
+        <locationX>578</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Not</defaultConnectorLabel>
+        <rules>
+            <name>KIT</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoicing_method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KIT</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SOQL_KIT_Price_book_records</targetReference>
+            </connector>
+            <label>KIT</label>
+        </rules>
+        <rules>
+            <name>CPR</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Invoicing_method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CPR</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SOQL_CPR_Price_book_records</targetReference>
+            </connector>
+            <label>CPR</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity_assign_Qwalys_global_Sol_to_specific_pricebook {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity_assign_Qwalys_global_Sol_to_specific_pricebook</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>SOQL_CPR_Price_book_records</name>
+        <label>SOQL CPR Price book records</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_CPR_price_Book_to_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Price Book CPR</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Pricebook2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>SOQL_KIT_Price_book_records</name>
+        <label>SOQL KIT Price book records</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Kit_Price_Book_to_Opportunity</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Price Book KIT</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Pricebook2</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Which_Invoice_Method_is_it</targetReference>
+        </connector>
+        <filterFormula>AND ( {!$User.Bypass_all_flow_trigger__c} = False , 
+NOT INCLUDES({!$User.Bypass_Flow_Trigger__c}, &quot;Opportunity_assign_Qwalys_global_Sol_to_specific_pricebook &quot;),
+{!$Record.RecordType.DeveloperName} = &quot;Qwalys_Global_solutions&quot;)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

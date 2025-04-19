@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_BillingAndShipping_Mandatory</fullName>
+    <active>true</active>
+    <description>BillingAddress and ShippingAddress are mandatory</description>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_all_validation_rules__c ),
+NOT(INCLUDES($User.Bypass_Validation_Rule__c, &apos;Account_BillingAndShipping_Mandatory&apos;)),
+				OR(
+								ISBLANK( BillingCity ),
+								ISBLANK( BillingStreet ),
+								ISBLANK( BillingPostalCode ),
+								ISBLANK( BillingCountry), 
+								ISBLANK( ShippingCity ),
+								ISBLANK( ShippingStreet ),
+								ISBLANK( ShippingPostalCode ),
+								ISBLANK( ShippingCountry)))</errorConditionFormula>
+    <errorMessage>Shipping Address and Billing Address are mandatory (street, postal code, city and country)</errorMessage>
+</ValidationRule>

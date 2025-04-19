@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allow the permission modify Opportunity Line items Sales price Or Quote Line items sales price synchonized</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Update Sales price</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditOppLineItemUnitPrice</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Delivery_Date</fullName>
+    <active>true</active>
+    <description>The Expected Delivery Date must be greater than the Close Date</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Expected_Delivery_Date__c)),
+    NOT(ISBLANK(CloseDate)),
+    Expected_Delivery_Date__c &lt; CloseDate
+)</errorConditionFormula>
+    <errorDisplayField>Expected_Delivery_Date__c</errorDisplayField>
+    <errorMessage>The Expected Delivery Date must be greater than the Close Date.</errorMessage>
+</ValidationRule>

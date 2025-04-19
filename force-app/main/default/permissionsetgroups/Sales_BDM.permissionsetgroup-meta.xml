@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sales BDM persona</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales BDM</label>
+    <permissionSets>Create_Indirect_End_User</permissionSets>
+    <permissionSets>Create_prospect</permissionSets>
+    <permissionSets>Hide_clone_button</permissionSets>
+    <permissionSets>Hide_delete_button_event</permissionSets>
+    <permissionSets>Hide_delete_button_task</permissionSets>
+    <permissionSets>Hide_edit_button</permissionSets>
+    <permissionSets>Update_Estimated_revenue_date_in_Quote_Line_Item</permissionSets>
+    <permissionSets>Update_Sales_price</permissionSets>
+    <permissionSets>Update_prospect</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

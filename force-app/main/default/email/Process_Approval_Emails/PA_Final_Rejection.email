@@ -1,0 +1,8 @@
+Hello
+
+The Quote N° {!Quote.QuoteNumber} owned by {!Quote.OwnerFullName} is rejected.
+Below find the link of the quote:
+{!Quote.Link}
+
+Thank you
+Have a good day

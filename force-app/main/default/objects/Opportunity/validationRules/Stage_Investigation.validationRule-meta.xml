@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Investigation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+    OR(
+        NOT($User.Bypass_all_validation_rules__c),
+        NOT(INCLUDES($User.Bypass_Validation_Rule__c, &quot;Stage_Investigation&quot;))
+    ),
+    ISPICKVAL(StageName, &quot;Investigation&quot;),
+    AND(
+        Opportunity_Value__c = 0,
+        Yearly_Revenue__c = 0
+    )
+)</errorConditionFormula>
+    <errorMessage>You must add at least one sub range detail revenue or product to your opportunity before proceeding to the next step</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Closed_Won</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+	OR(
+		NOT($User.Bypass_all_validation_rules__c ),
+		NOT(INCLUDES($User.Bypass_Validation_Rule__c,&quot;Stage_Closed_Won&quot;))
+	),
+	NOT ((ISPICKVAL(PRIORVALUE(StageName), &quot;Closed Won&quot;))),
+	ISPICKVAL(StageName, &quot;Closed Won&quot;),
+	OR(
+		(Number_of_quotes__c &gt;0 &amp;&amp; Number_of_accepted_quotes__c = 0),
+		(Number_of_quotes__c &gt; Number_of_accepted_quotes__c &amp;&amp; Count_Ratio_salesP_by_ListP__c &gt; 0) 
+	)
+)</errorConditionFormula>
+    <errorMessage>You must fill in the estimated revenue, check the approved quote before closing the opportunity</errorMessage>
+</ValidationRule>

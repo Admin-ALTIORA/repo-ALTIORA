@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides access to create, edit and delete event</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Edit event</label>
+    <license>Salesforce</license>
+</PermissionSet>

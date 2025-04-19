@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Negotiation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+	OR(
+NOT($User.Bypass_all_validation_rules__c ),
+NOT(INCLUDES($User.Bypass_Validation_Rule__c,&quot;Stage_Negotiation&quot;))
+),
+NOT ((ISPICKVAL(PRIORVALUE(StageName), &quot;Negotiation&quot;))),
+ISPICKVAL(StageName, &quot;Negotiation&quot;),
+ Yearly_Revenue__c  = 0)</errorConditionFormula>
+    <errorMessage>You must add at least one product to your opportunity before proceeding to the next step</errorMessage>
+</ValidationRule>

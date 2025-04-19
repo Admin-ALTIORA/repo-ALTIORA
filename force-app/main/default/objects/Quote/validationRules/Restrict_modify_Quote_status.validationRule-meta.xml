@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_modify_Quote_status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+NOT($User.Bypass_all_validation_rules__c ),
+NOT(INCLUDES($User.Bypass_Validation_Rule__c, &apos;Restrict_modify_Quote_status&apos;)),
+AND(  Count_Ratio_salesP_by_ListP__c &gt; 0,
+  NOT(ISNEW()), 
+  ISCHANGED(Status))
+)</errorConditionFormula>
+    <errorMessage>You cannot update the status</errorMessage>
+</ValidationRule>

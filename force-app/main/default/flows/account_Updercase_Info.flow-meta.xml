@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Address and last name in uppercase</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>accountNameCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.Name})</expression>
+    </formulas>
+    <formulas>
+        <name>bilingCountryCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.BillingCountry}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>BillingCityCaps</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.BillingCity})</expression>
+    </formulas>
+    <formulas>
+        <name>billingStateCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.BillingState})</expression>
+    </formulas>
+    <formulas>
+        <name>billingStreetCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.BillingStreet})</expression>
+    </formulas>
+    <formulas>
+        <name>shippingCityCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.ShippingCity})</expression>
+    </formulas>
+    <formulas>
+        <name>shippingCountryCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.ShippingCountry}
+
+)</expression>
+    </formulas>
+    <formulas>
+        <name>shippingStateCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER(
+{!$Record.ShippingState}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>shippingStreetCap</name>
+        <dataType>String</dataType>
+        <expression>UPPER({!$Record.ShippingStreet}
+)</expression>
+    </formulas>
+    <interviewLabel>account Updercase Info {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Updercase Info</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>make address and last name in Uppercase</description>
+        <name>accountUppercaseInfo</name>
+        <label>accountUppercaseInfo</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>BillingCity</field>
+            <value>
+                <elementReference>BillingCityCaps</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingCountry</field>
+            <value>
+                <elementReference>bilingCountryCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingState</field>
+            <value>
+                <elementReference>billingStateCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingStreet</field>
+            <value>
+                <elementReference>billingStreetCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>accountNameCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingCity</field>
+            <value>
+                <elementReference>shippingCityCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingCountry</field>
+            <value>
+                <elementReference>shippingCountryCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingState</field>
+            <value>
+                <elementReference>shippingStateCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ShippingStreet</field>
+            <value>
+                <elementReference>shippingStreetCap</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>accountUppercaseInfo</targetReference>
+        </connector>
+        <filterFormula>AND ( {!$User.Bypass_all_flow_trigger__c} = False , 
+NOT INCLUDES({!$User.Bypass_Flow_Trigger__c}, &quot;Account Updercase Info&quot;))</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

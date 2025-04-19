@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>NewExpirationDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>DATE ( YEAR(Datevalue({!$Record.CreatedDate})), MONTH(Datevalue({!$Record.CreatedDate}))+1,DAY(Datevalue({!$Record.CreatedDate})))</expression>
+    </formulas>
+    <interviewLabel>Quote_Expiration Date at 1Month during creation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote_Expiration Date at 1Month during creation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Quote_Expiration_date</name>
+        <label>Update Quote Expiration date</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>ExpirationDate</field>
+            <value>
+                <elementReference>NewExpirationDateFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Quote_Expiration_date</targetReference>
+        </connector>
+        <filterFormula>AND ( {!$User.Bypass_all_flow_trigger__c} = False , 
+NOT INCLUDES({!$User.Bypass_Flow_Trigger__c}, &quot;Quote_Expiration Date at 1Month during creation&quot;))</filterFormula>
+        <object>Quote</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Hide_Choose_price_book_opportunity</name>
+    </customPermissions>
+    <description>Hide Deep clone button for marketing and ADV</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Hide Choose price book button for marketing and ADV</label>
+    <license>Salesforce</license>
+</PermissionSet>

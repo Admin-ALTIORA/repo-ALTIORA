@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Marketing persona</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Marketing</label>
+    <permissionSets>Edit_event</permissionSets>
+    <permissionSets>Edit_task</permissionSets>
+    <permissionSets>Hide_choose_pricebook_button_for_marketing_and_ADV</permissionSets>
+    <permissionSets>Hide_deep_clone_button_for_marketing_and_ADV</permissionSets>
+    <permissionSets>Hide_delete_button_event</permissionSets>
+    <permissionSets>Hide_delete_button_task</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

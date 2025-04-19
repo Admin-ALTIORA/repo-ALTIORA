@@ -1,0 +1,9 @@
+Hello
+
+The Quote N° {!Quote.QuoteNumber} owned by {!Quote.OwnerFullName} is assigned to you for approval.
+The total price of the quote is : {!Quote.TotalPrice}
+Below find the link of the quote: 
+{!Quote.Link}
+
+Thank you
+Have a good day

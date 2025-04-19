@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_edit_to_account_record_types</fullName>
+    <active>true</active>
+    <description>Restrict_edit_to_Account end user direct, Account end user indirect and Account distributor</description>
+    <errorConditionFormula>AND(
+NOT($User.Bypass_all_validation_rules__c ),
+NOT(INCLUDES($User.Bypass_Validation_Rule__c, &apos;Restrict_edit_to_account_record_types&apos;)),
+NOT(ISNEW()),
+OR (
+RecordType.Name = &apos;Account distributor&apos;,
+RecordType.Name = &apos;Account end user direct&apos;),
+OR (
+$UserRole.Name = &apos;BDM France SE&apos;,
+$UserRole.Name = &apos;BDM France NW&apos;,
+$UserRole.Name = &apos;BDM Iberica&apos;,
+$UserRole.Name = &apos;BDM LATAM&apos;,
+$UserRole.Name = &apos;BDM India&apos;,
+$UserRole.Name = &apos;BDM APAC&apos;,
+$UserRole.Name = &apos;BDM Africa/Middle East&apos;)
+)</errorConditionFormula>
+    <errorMessage>Your profile does not allow to modify this account, please contact ADV team or Admnisitrator</errorMessage>
+</ValidationRule>

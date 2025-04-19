@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_phone_Account</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+NOT($User.Bypass_all_validation_rules__c ),
+NOT(INCLUDES($User.Bypass_Validation_Rule__c, &apos;VR_phone_Account&apos;)),
+NOT(REGEX(Phone, &quot;[+][0-9]{1,3}[0-9]{5,16}&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>The Phone number should start with &quot;+&quot; (Ex: +33 for France) with a maximum of 14 caracters</errorMessage>
+</ValidationRule>

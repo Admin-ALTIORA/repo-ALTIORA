@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Admin persona</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Admin</label>
+    <permissionSets>Create_Indirect_End_User</permissionSets>
+    <permissionSets>Create_and_Edit_a_Dashboard_Folder</permissionSets>
+    <permissionSets>Create_and_Edit_a_Report_Folder</permissionSets>
+    <permissionSets>Create_prospect</permissionSets>
+    <permissionSets>Delete_opportunity</permissionSets>
+    <permissionSets>Delete_prospect</permissionSets>
+    <permissionSets>Delete_quote</permissionSets>
+    <permissionSets>Hide_clone_button</permissionSets>
+    <permissionSets>Hide_delete_button</permissionSets>
+    <permissionSets>Update_Estimated_revenue_date_in_Quote_Line_Item</permissionSets>
+    <permissionSets>Update_Sales_price</permissionSets>
+    <permissionSets>Update_account</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

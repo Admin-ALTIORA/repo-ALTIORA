@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sales manager persona</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales manager</label>
+    <permissionSets>Create_prospect</permissionSets>
+    <permissionSets>Hide_clone_button</permissionSets>
+    <permissionSets>Update_Estimated_revenue_date_in_Quote_Line_Item</permissionSets>
+    <permissionSets>Update_Sales_price</permissionSets>
+    <permissionSets>Update_prospect</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

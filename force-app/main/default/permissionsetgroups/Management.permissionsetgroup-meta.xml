@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Management persona</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Management</label>
+    <permissionSets>Delete_contact</permissionSets>
+    <permissionSets>Delete_opportunity</permissionSets>
+    <permissionSets>Delete_price_book</permissionSets>
+    <permissionSets>Delete_quote</permissionSets>
+    <permissionSets>Edit_event</permissionSets>
+    <permissionSets>Edit_task</permissionSets>
+    <permissionSets>Hide_clone_button_for_marketing_and_management</permissionSets>
+    <permissionSets>Update_Estimated_revenue_date_in_Quote_Line_Item</permissionSets>
+    <permissionSets>Update_Sales_price</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

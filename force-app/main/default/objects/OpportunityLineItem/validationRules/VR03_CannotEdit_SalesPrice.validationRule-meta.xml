@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_CannotEdit_SalesPrice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				NOT( $User.Bypass_all_validation_rules__c ),
+				NOT(INCLUDES( $User.Bypass_Validation_Rule__c,&apos;VR03_CannotEdit_SalesPrice&apos;)),
+				NOT(ISCHANGED( Bypass_VR03_CannotEdit_SalesPrice__c )),
+				ISCHANGED( UnitPrice ))</errorConditionFormula>
+    <errorMessage>Prices are defined by the Quote, you cannot edit them</errorMessage>
+</ValidationRule>

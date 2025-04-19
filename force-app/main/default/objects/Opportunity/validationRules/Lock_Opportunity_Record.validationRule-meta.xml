@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Opportunity_Record</fullName>
+    <active>false</active>
+    <description>You can not edit Closed Won, Closed Lost or Cancelled opportunities.</description>
+    <errorConditionFormula>OR(
+				AND(ISCHANGED(StageName), PRIORVALUE(IsClosed) = true),
+				AND(NOT(ISCHANGED(StageName)),IsClosed = true)
+				)</errorConditionFormula>
+    <errorMessage>You can not edit Closed Won, Closed Lost or Cancelled opportunities.</errorMessage>
+</ValidationRule>

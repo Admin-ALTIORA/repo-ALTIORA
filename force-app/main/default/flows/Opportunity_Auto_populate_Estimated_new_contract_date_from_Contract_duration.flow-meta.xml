@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Contract_duration_is_Null</name>
+        <label>Contract duration is Null</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Yes</defaultConnectorLabel>
+        <rules>
+            <name>No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contract_duration__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Estimated_new_contract_date_field</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>DateCalculation</name>
+        <dataType>Date</dataType>
+        <expression>DATE ( YEAR({!$Record.CloseDate})+ Value(Text({!$Record.Contract_duration__c})), MONTH({!$Record.CloseDate}),DAY({!$Record.CloseDate}))</expression>
+    </formulas>
+    <interviewLabel>Opportunity_Auto_populate_Estimated_new_contract_date_from_Contract_duration {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity_Auto_populate_Estimated_new_contract_date_from_Contract_duration</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Estimated_new_contract_date_field</name>
+        <label>Update Estimated_new_contract_date field</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <inputAssignments>
+            <field>Estimated_new_contract_date__c</field>
+            <value>
+                <elementReference>DateCalculation</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Contract_duration_is_Null</targetReference>
+        </connector>
+        <filterFormula>AND ( {!$User.Bypass_all_flow_trigger__c} = False , 
+NOT INCLUDES({!$User.Bypass_Flow_Trigger__c}, &quot;Opportunity_Auto_populate_Estimated_new_contract_date_from_Contract_duration&quot;))</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
