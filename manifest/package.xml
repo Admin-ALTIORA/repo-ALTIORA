@@ -33,462 +33,83 @@
         <name>StaticResource</name>
     </types>
     <types>
-        <members>account_Updercase_Info</members>
-        <members>Email_Notification_to_ADV_Creation_of_Customer_Accounts</members>
-        <members>Opportunity_assign_Qwalys_global_Sol_to_specific_pricebook</members>
-        <members>Opportunity_Assign_Std_Pricebook_to_Account_Or_Std_Pricebook</members>
-        <members>Opportunity_auto_deep_clone_close_win_lost</members>
-        <members>Opportunity_Auto_populate_Estimated_new_contract_date_from_Contract_duration</members>
-        <members>Opportunity_Deep_clone_with_related_objects</members>
-        <members>Opportunity_isClone_to_false_after_update_Opportunity</members>
-        <members>Opportunity_Line_Items_Salesprice_By_Listprice</members>
-        <members>Opportunity_Price_books_linked_to_Account</members>
-        <members>Opportunity_Product_update_oneshot_field_for_Qwalys_line_items</members>
-        <members>Opp_Contact_role_set_the_1st_record_Primary</members>
-        <members>Quote_Expiration_Date_at_1Month_during_creation</members>
-        <members>Quote_Line_Items_Salesprice_By_Listprice</members>
-        <members>Quote_Line_items_update_oneshot_field_for_Qwalys_line_items</members>
-        <members>Quote_Process_Approval_Auto_submitted_through_flow</members>
-        <members>Quote_Synced_first_quote</members>
-        <members>Synchronize_Opp_Line_from_Quote_Line</members>
-        <members>Synchronize_Quote_Line_from_Opp_Line</members>
+        <members>*</members>
         <name>Flow</name>
     </types>
       <types>
-        <members>account_Updercase_Info</members>
-        <members>Email_Notification_to_ADV_Creation_of_Customer_Accounts</members>
-        <members>Opportunity_assign_Qwalys_global_Sol_to_specific_pricebook</members>
-        <members>Opportunity_Assign_Std_Pricebook_to_Account_Or_Std_Pricebook</members>
-        <members>Opportunity_auto_deep_clone_close_win_lost</members>
-        <members>Opportunity_Auto_populate_Estimated_new_contract_date_from_Contract_duration</members>
-        <members>Opportunity_Deep_clone_with_related_objects</members>
-        <members>Opportunity_isClone_to_false_after_update_Opportunity</members>
-        <members>Opportunity_Line_Items_Salesprice_By_Listprice</members>
-        <members>Opportunity_Price_books_linked_to_Account</members>
-        <members>Opportunity_Product_update_oneshot_field_for_Qwalys_line_items</members>
-        <members>Opp_Contact_role_set_the_1st_record_Primary</members>
-        <members>Quote_Expiration_Date_at_1Month_during_creation</members>
-        <members>Quote_Line_Items_Salesprice_By_Listprice</members>
-        <members>Quote_Line_items_update_oneshot_field_for_Qwalys_line_items</members>
-        <members>Quote_Process_Approval_Auto_submitted_through_flow</members>
-        <members>Quote_Synced_first_quote</members>
-        <members>Synchronize_Opp_Line_from_Quote_Line</members>
-        <members>Synchronize_Quote_Line_from_Opp_Line</members>
+        <members>*</members>
         <name>FlowDefinition</name>
     </types>
     <types>
-        <members>Account.Account_BillingAndShipping_Mandatory</members>
-        <members>Account.Restrict_edit_to_account_record_types</members>
-        <members>Account.VR03_UpercaseCountry</members>
-        <members>Account.VR_phone_Account</members>
-        <members>Contact.First_Name_required</members>
-        <members>Contact.VR_phone_Contact</members>
-        <members>Opportunity.Stage_Proposal</members>
-        <members>Opportunity.Lock_Opportunity_Record</members>
-        <members>Opportunity.Stage_Closed_Lost</members>
-        <members>Opportunity.Stage_Closed_Won</members>
-        <members>Opportunity.Expected_Delivery_Date</members>
-        <members>Opportunity.Stage_Qualifacation</members>
-        <members>Opportunity.Stage_Investigation</members>
-        <members>Opportunity.Lock_Opportunity_Forecast</members>
-        <members>Opportunity.Stage_Negotiation</members>
-        <members>Opportunity.Stage_Cancelled</members>
-        <members>OpportunityLineItem.VR03_CannotEdit_SalesPrice</members>
-        <members>OpportunityLineItem.Estimate_Revenue_Date_required</members>
-        <members>Quote.Restrict_modify_Quote_status</members>
-        <members>Quote.VR02_SalesNotApproveAndReject</members>
+        <members>*</members>
         <name>ValidationRule</name>
     </types>
     <types>
-        <members>Account</members>
-        <members>Case</members>
-        <members>Quote</members>
+        <members>*</members>
         <name>Workflow</name>
     </types>
      <types>
-        <members>Process_Approval_Emails/PA_Assignement</members>
-        <members>Process_Approval_Emails/PA_Final_Approval</members>
-        <members>Process_Approval_Emails/PA_Final_Rejection</members>
+        <members>*</members>
         <name>EmailTemplate</name>
     </types>
     <types>
-        <members>Case</members>
-        <members>Lead</members>
+        <members>*</members>
         <name>AssignmentRules</name>
     </types>
      <types>
-        <members>requête standard</members>
+        <members>*</members>
         <name>EntitlementProcess</name>
     </types>
     <types>
-        <members>Escalader la requête</members>
-        <members>Fermer la requête</members>
-        <members>Première réponse au client</members>
+        <members>*</members>
         <name>MilestoneType</name>
     </types>
     <types>
-        <members>Case</members>
+        <members>*</members>
         <name>EscalationRules</name>
     </types>
     <types>
-        <members>Account_Record_Page</members>
-        <members>Account_Record_Page1</members>
-        <members>Account_Record_Page2</members>
-        <members>ContactCenter_UtilityBar</members>
-        <members>Contact_Record_Page</members>
-        <members>Contact_Record_Page1</members>
-        <members>CrisisCenter_UtilityBar</members>
-        <members>DataGovernanceConsole_UtilityBar</members>
-        <members>Diagast_Account_record_Page</members>
-        <members>Diagast_Contact_record_Page</members>
-        <members>Diagast_Opportunity_record_page</members>
-        <members>Diagast_Product_Ligthning_Page</members>
-        <members>Diagast_Quote_Lightning_page</members>
-        <members>Diagast_Sales_Home_Page</members>
-        <members>Event_Record_Page</members>
-        <members>ExpressionSetConsole_UtilityBar</members>
-        <members>FlowsApp_UtilityBar</members>
-        <members>Getting_Started_Home</members>
-        <members>Home_Page_Default</members>
-        <members>Lead_Generation_UtilityBar</members>
-        <members>Lead_Record_Page</members>
-        <members>Lead_Record_Page1</members>
-        <members>LightningBolt_UtilityBar</members>
-        <members>LightningSalesConsole_UtilityBar</members>
-        <members>LightningService_UtilityBar</members>
-        <members>Opportunity_Record_Page</members>
-        <members>Opportunity_Record_Page1</members>
-        <members>Relationship_Management_UtilityBar</members>
-        <members>SalesCloudMobile_UtilityBar</members>
-        <members>Salesforce_Excellence_UtilityBar</members>
-        <members>Sales_Leadership_UtilityBar</members>
-        <members>Sales_Operations_UtilityBar</members>
-        <members>Sales_UtilityBar</members>
+        <members>*</members>
         <name>FlexiPage</name>
     </types>
      <types>
-        <members>Account-Account Customer distributeur Layout</members>
-        <members>Account-Account Customer end user direct Layout</members>
-        <members>Account-Account Customer end user indirect Layout</members>
-        <members>Account-Account Groupement</members>
-        <members>Account-Account Layout</members>
-        <members>Account-Account Prospect distributor Layout</members>
-        <members>Account-Account Prospect end user Layout</members>
-        <members>AccountContactRelation-Account Contact Relationship Layout</members>
-        <members>AccountTeamMember-Account Team Member Layout</members>
-        <members>ActionPlan-Action Plan Layout</members>
-        <members>ActionPlanItemDependency-Action Plan Item Dependency Layout</members>
-        <members>ActionPlanTemplate-Action Plan Template Layout</members>
-        <members>ActionPlanTemplateItem-Action Plan Template Item Layout</members>
-        <members>ActionPlanTemplateItemValue-Action Plan Template Item Value Layout</members>
-        <members>ActionPlanTemplateVersion-Action Plan Template Version Layout</members>
-        <members>ActionPlnTmplItmDependency-Action Plan Template Item Dependency Layout</members>
-        <members>Address-Address Layout</members>
-        <members>Asset-Asset Layout</members>
-        <members>AssetRelationship-Asset Relationship Layout</members>
-        <members>AssociatedLocation-Associated Location Layout</members>
-        <members>CalcMatrixColumnRange-Decision Matrix Column Range Layout</members>
-        <members>CalcProcStepRelationship-Expression Set Step Relationship Layout</members>
-        <members>CalculationMatrix-Decision Matrix Layout</members>
-        <members>CalculationMatrixColumn-Decision Matrix Column Layout</members>
-        <members>CalculationMatrixRow-Decision Matrix Row Layout</members>
-        <members>CalculationMatrixVersion-Decision Matrix Version Layout</members>
-        <members>CalculationProcedure-Calculation Procedure Layout</members>
-        <members>CalculationProcedureStep-Calculation Procedure Step Layout</members>
-        <members>CalculationProcedureVariable-Calculation Procedure Variable Layout</members>
-        <members>CalculationProcedureVersion-Calculation Procedure Version Layout</members>
-        <members>Campaign-Campaign Layout</members>
-        <members>CampaignInfluenceModel-Campaign Influence Model Layout</members>
-        <members>CampaignMember-Campaign Member Page Layout</members>
-        <members>Case-Case Layout</members>
-        <members>CaseClose-Close Case Layout</members>
-        <members>CaseInteraction-Case Feed Layout</members>
-        <members>CaseMilestone-Présentation du jalon de requête</members>
-        <members>CollaborationGroup-Group Layout</members>
-        <members>Contact-Contact Layout</members>
-        <members>ContentVersion-Content Version</members>
-        <members>Contract-Contract Layout</members>
-        <members>ContractLineItem-Présentation de l%27élément de ligne de contrat</members>
-        <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
-        <members>EmailMessage-Email Message Layout</members>
-        <members>EmpUserProvisioningProcess-Employee User Provisioning Process Layout</members>
-        <members>EmpUserProvisionProcessErr-Employee User Provisioning Process Error Layout</members>
-        <members>EngagementInteraction-Engagement Interaction Layout</members>
-        <members>EngagementTopic-Engagement Topic Layout</members>
-        <members>Entitlement-Présentation de l%27autorisation</members>
-        <members>EntityMilestone-Présentation du jalon d%27objet</members>
-        <members>Event-Event Layout</members>
-        <members>ExpressionSet-Expression Set Layout</members>
-        <members>ExpressionSetVersion-Expression Set Version Layout</members>
-        <members>FeedItem-Feed Item Layout</members>
-        <members>FlowInterview-Flow Interview Layout</members>
-        <members>Global-Global Layout</members>
-        <members>Idea-Idea Layout</members>
-        <members>Lead-Lead Layout</members>
-        <members>ListEmail-Présentation E-mail de liste</members>
-        <members>Location-Location Layout</members>
-        <members>Macro-Macro Layout</members>
-        <members>Opportunity-Opportunity Dx %28Diagnostics%29</members>
-        <members>Opportunity-Opportunity Forecast</members>
-        <members>Opportunity-Opportunity Layout</members>
-        <members>Opportunity-Opportunity Ox %28Origins%29</members>
-        <members>Opportunity-Opportunity POC Layout</members>
-        <members>Opportunity-Opportunity Products Layout</members>
-        <members>Opportunity-Opportunity Qw %28Qwalys%29</members>
-        <members>Opportunity-Opportunity Qwalys Global solutions Layout</members>
-        <members>OpportunityContactRole-Opportunity Contact Role Layout</members>
-        <members>OpportunityLineItem-Opportunity Product Layout</members>
-        <members>OpportunityTeamMember-Opportunity Team Member Layout</members>
-        <members>Order-Order Layout</members>
-        <members>OrderItem-Order Product Layout</members>
-        <members>Pricebook2-Price Book Layout</members>
-        <members>PricebookEntry-Price Book Entry Layout</members>
-        <members>Pricebook_to_Account__c-Pricebook to Account Layout</members>
-        <members>ProcessException-Process Exception Layout</members>
-        <members>Product2-Product Layout</members>
-        <members>ProfileSkill-Skill Layout</members>
-        <members>ProfileSkillEndorsement-Endorsement Layout</members>
-        <members>ProfileSkillUser-Skill User Layout</members>
-        <members>QuickText-Quick Text Layout</members>
-        <members>Quote-Quote Dx %28Diagnostics%29 Layout</members>
-        <members>Quote-Quote Layout</members>
-        <members>Quote-Quote Ox %28Origins%29 Layout</members>
-        <members>Quote-Qwalys Layout</members>
-        <members>QuoteLineItem-Quote Line Item Layout</members>
-        <members>Revenue_Sub_Range_detail__c-Revenue Sub-Range detail Layout</members>
-        <members>Scorecard-Scorecard Layout</members>
-        <members>ScorecardAssociation-Scorecard Association Layout</members>
-        <members>ScorecardMetric-Scorecard Metric Layout</members>
-        <members>ServiceContract-Présentation du contrat de service</members>
-        <members>SocialPersona-Social Persona Layout</members>
-        <members>SocialPost-Social Post Layout</members>
-        <members>Solution-Solution Layout</members>
-        <members>Task-Task Layout</members>
-        <members>User-User Layout</members>
-        <members>UserAlt-User Profile Layout</members>
-        <members>UserAppMenuItem-Application Layout</members>
-        <members>UserProvAccount-User Provisioning Account Layout</members>
-        <members>UserProvisioningLog-User Provisioning Log Layout</members>
-        <members>UserProvisioningRequest-User Provisioning Request Layout</members>
-        <members>WorkAccess-Access Layout</members>
-        <members>WorkBadge-Badge Layout</members>
-        <members>WorkBadge-Badge Received Layout 192</members>
-        <members>WorkBadgeDefinition-Badge Definition Layout</members>
-        <members>WorkBadgeDefinition-Badge Layout 192</members>
-        <members>WorkOrder-Work Order Layout</members>
-        <members>WorkOrderLineItem-Work Order Line Item Layout</members>
-        <members>WorkPlanTemplate-Work Plan Template Layout</members>
-        <members>WorkThanks-Thanks Layout</members>
+        <members>*</members>
         <name>Layout</name>
     </types>
        <types>
-        <members>Account.Account_Compact_Layout</members>
-        <members>Contact.Compact_Layout_Contact</members>
-        <members>Lead.Leads_Custom_Compact_Layout</members>
-        <members>Opportunity.New_Awesome_Companct_Layout</members>
-        <members>Opportunity.Diagast_Opportunity_compact_layout</members>
-        <members>Quote.Diagast_Compact_Layout</members>
-        <members>User.User_Layout</members>
+        <members>*</members>
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>Quote.France_process_approval_V2</members>
-        <members>Quote.Quote_Type_Sample_process_approval</members>
-        <members>Quote.Export_process_approval1_V2</members>
-        <members>Quote.Export_process_approval2_V2</members>
+        <members>*</members>
         <name>ApprovalProcess</name>
     </types>
     <types>
-        <members>Case</members>
-        <members>Lead</members>
+        <members>*</members>
         <name>AutoResponseRules</name>
     </types>
     <types>
-        <members>DIAGAST_header</members>
-        <members>DIAGAST_header1</members>
-        <members>DIAGAST_header2</members>
-        <members>DIAGAST_header3</members>
-        <members>DIAGAST_linkedin_cover_2021</members>
-        <members>DIAGAST_linkedin_cover_20211</members>
-        <members>DIAGAST_linkedin_cover_20212</members>
-        <members>Image2</members>
-        <members>Image_20230525_080558</members>
-        <members>Image_20230525_080558_1</members>
-        <members>Image_20230525_080558_2</members>
-        <members>Image_20230525_080558_3</members>
-        <members>Image_20230525_080558_4</members>
-        <members>Lead_generation</members>
-        <members>logo_DIAGAST_SF_2</members>
-        <members>people</members>
-        <members>people1</members>
-        <members>relationship_management</members>
-        <members>Sales</members>
-        <members>Sales_leadersship</members>
-        <members>Sales_operation</members>
-        <members>X1_people</members>
-        <members>X1_people1</members>
+        <members>*</members>
         <name>ContentAsset</name>
     </types>
     <types>
-        <members>Default</members>
-        <members>Default_Opportunity</members>
-        <members>Opportunity_POC</members>
-        <members>Opportunity_Product</members>
-        <members>Opportunity_Qwalys</members>
-        <members>Qwalys_Global_solutions</members>
+        <members>*</members>
         <name>PathAssistant</name>
     </types>
     <types>
-        <members>Create_and_Edit_a_Dashboard_Folder</members>
-        <members>Create_and_Edit_a_Report_Folder</members>
-        <members>Create_Indirect_End_User</members>
-        <members>Create_prospect</members>
-        <members>Delegated_Admin</members>
-        <members>Delete_contact</members>
-        <members>Delete_opportunity</members>
-        <members>Delete_price_book</members>
-        <members>Delete_prospect</members>
-        <members>Delete_quote</members>
-        <members>Diagast_Standard_User</members>
-        <members>Diagast_System_Administrator</members>
-        <members>Edit_Erp_Id</members>
-        <members>Edit_event</members>
-        <members>Edit_task</members>
-        <members>Hide_choose_pricebook_button_for_marketing_and_ADV</members>
-        <members>Hide_clone_button</members>
-        <members>Hide_clone_button_for_marketing_and_management</members>
-        <members>Hide_deep_clone_button_for_marketing_and_ADV</members>
-        <members>Hide_delete_button</members>
-        <members>Hide_delete_button_event</members>
-        <members>Hide_delete_button_task</members>
-        <members>Hide_edit_button</members>
-        <members>Hide_edit_button_event</members>
-        <members>Hide_edit_button_task</members>
-        <members>Multi_factor_Authentification</members>
-        <members>Password_Never_Expires</members>
-        <members>Sales_User</members>
-        <members>sfdcInternalInt__sfdc_a360</members>
-        <members>sfdcInternalInt__sfdc_a360_sfcrm_data_extract</members>
-        <members>Update_account</members>
-        <members>Update_Estimated_revenue_date_in_Quote_Line_Item</members>
-        <members>Update_Opportunity</members>
-        <members>Update_prospect</members>
-        <members>Update_Quote</members>
-        <members>Update_Sales_price</members>
-        <members>Update_Validated_price_in_Quote_Line_Item</members>
-        <members>User_Access_to_Run_Flows</members>
-        <members>View_Opportunity_Forecast</members>
+        <members>*</members>
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>Admin</members>
-        <members>ADV</members>
-        <members>Finance</members>
-        <members>force__CopilotSalesforceAdminPSG</members>
-        <members>force__CopilotSalesforceUserPSG</members>
-        <members>Management</members>
-        <members>Marketing</members>
-        <members>Sales_BDM</members>
-        <members>Sales_manager</members>
+        <members>*</members>
         <name>PermissionSetGroup</name>
     </types>
      <types>
-        <members>Hide_Choose_price_book_opportunity</members>
-        <members>Hide_clone_button_account</members>
-        <members>Hide_clone_Button_for_Marketing_and_Management</members>
-        <members>Hide_Deep_Clone_Opportunity</members>
-        <members>Hide_delete_button_account</members>
-        <members>Hide_delete_button_event</members>
-        <members>Hide_delete_button_task</members>
-        <members>Hide_edit_button_account</members>
-        <members>Hide_edit_button_event</members>
-        <members>Hide_edit_button_task</members>
-        <members>View_Opportunity_Forecast</members>
+        <members>*t</members>
         <name>CustomPermission</name>
     </types>
     <types>
-        <members>Account.Notify_Customer_creation</members>
-        <members>Account.Child_Account</members>
-        <members>Campaign.Child_Campaign</members>
-        <members>Case.NewChildCase</members>
-        <members>CollaborationGroup.NewGroupRecord</members>
-        <members>CollaborationGroup.NewGroupMember</members>
-        <members>FeedItem.NewTaskFromFeedItem</members>
-        <members>Follow_Up</members>
-        <members>LogACall</members>
-        <members>NewAccount</members>
-        <members>NewCase</members>
-        <members>NewContact</members>
-        <members>NewEvent</members>
-        <members>NewGroup</members>
-        <members>NewLead</members>
-        <members>NewOpportunity</members>
-        <members>NewTask</members>
-        <members>Opportunity.Deep_clone_Opportunity</members>
-        <members>Opportunity.Choose_Price_Book</members>
-        <members>Quote.SendEmail</members>
-        <members>Quote.Submit_for_Approval</members>
-        <members>SendEmail</members>
-        <members>Task.EditDescription_0</members>
-        <members>Task.EditDescription_8</members>
-        <members>Task.UpdatePriority_1</members>
-        <members>Task.UpdateStatus_8</members>
-        <members>Task.UpdatePriority_6</members>
-        <members>Task.Defer_4</members>
-        <members>Task.UpdatePriority_13</members>
-        <members>Task.UpdatePriority_10</members>
-        <members>Task.Defer_12</members>
-        <members>Task.UpdatePriority_5</members>
-        <members>Task.Defer_2</members>
-        <members>Task.EditDescription_11</members>
-        <members>Task.UpdateStatus_6</members>
-        <members>Task.UpdateStatus_2</members>
-        <members>Task.Defer_5</members>
-        <members>Task.UpdateStatus_7</members>
-        <members>Task.UpdatePriority_0</members>
-        <members>Task.UpdatePriority_12</members>
-        <members>Task.Defer_0</members>
-        <members>Task.Defer_8</members>
-        <members>Task.UpdatePriority_3</members>
-        <members>Task.UpdatePriority_2</members>
-        <members>Task.Defer_6</members>
-        <members>Task.EditDescription_9</members>
-        <members>Task.UpdatePriority_11</members>
-        <members>Task.EditDescription_2</members>
-        <members>Task.EditDescription_4</members>
-        <members>Task.EditDescription_3</members>
-        <members>Task.UpdateStatus_0</members>
-        <members>Task.EditDescription_10</members>
-        <members>Task.UpdateStatus_3</members>
-        <members>Task.Defer_9</members>
-        <members>Task.EditDescription_1</members>
-        <members>Task.Defer_11</members>
-        <members>Task.Defer_13</members>
-        <members>Task.UpdatePriority_8</members>
-        <members>Task.UpdateStatus_10</members>
-        <members>Task.EditDescription_6</members>
-        <members>Task.Defer_1</members>
-        <members>Task.UpdateStatus_4</members>
-        <members>Task.UpdateStatus</members>
-        <members>Task.EditDescription_5</members>
-        <members>Task.Defer</members>
-        <members>Task.UpdateStatus_12</members>
-        <members>Task.UpdateStatus_5</members>
-        <members>Task.UpdatePriority_4</members>
-        <members>Task.UpdatePriority</members>
-        <members>Task.EditDescription</members>
-        <members>Task.UpdateStatus_1</members>
-        <members>Task.EditDescription_13</members>
-        <members>Task.UpdateStatus_11</members>
-        <members>Task.UpdateStatus_9</members>
-        <members>Task.EditDescription_12</members>
-        <members>Task.EditDescription_7</members>
-        <members>Task.UpdateStatus_13</members>
-        <members>Task.Defer_10</members>
-        <members>Task.Defer_3</members>
-        <members>Task.Defer_7</members>
-        <members>Task.UpdatePriority_7</members>
-        <members>Task.UpdatePriority_9</members>
+        <members>*</members>
         <name>QuickAction</name>
     </types>
     <version>63.0</version>
