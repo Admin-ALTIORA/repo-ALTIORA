@@ -43,3 +43,14 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# VS Code workspace and settings files
+.vscode/
+*.code-workspace
+
+# Temporary metadata API files and package files
+*.zip
+*.org-meta.xml
+
+# Test results or coverage (already included, repeated for clarity)
+test-result/
