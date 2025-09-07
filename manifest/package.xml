@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Case.Automate Support Process</members>
-		<members>Case.Others Support Process</members>
-		<name>BusinessProcess</name>
-	</types>
-	<types>
-		<members>Case.Automate</members>
-		<members>Case.Other</members>
-		<name>RecordType</name>
+		<members>Asset_Record_Page</members>
+		<name>FlexiPage</name>
 	</types>
 	<version>63.0</version>
 </Package>
